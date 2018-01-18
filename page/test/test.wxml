@@ -1,0 +1,146 @@
+
+<view class='btn-area'>
+    <navigator url='../../page/test/test2?title=漂亮的页面' hover-class='navigator-hover'>跳转到最漂亮的页面</navigator>
+    <navigator url='../../page/test/test2?title=redirect' open-type="redirect" hover-class='other-navgator-hover'>在这里打开最漂亮的页面</navigator>
+    <navigator url='../../page/test/test2' open-type='switchTab' hover-class='other-navigator-hover'>切换tab</navigator>
+    <navigator url='../../page/test/navigator' open-type='switchTab' hover-class='other-navigator-hover'>切换tab</navigator>
+
+
+</view>
+
+
+
+<template name="iconTemplate">
+    <view class='icon-view'>
+        <icon type='success' size='30' color='red'></icon>
+        <text></text>
+    </view>
+</template>
+
+<template name="progressTemplate">
+    <view class='icon-view'>
+        <progress percent='{{percent}}' color='{{color}}' show-info='{{show_info}}' stroke-width='{{stroke_width}}' active='{{active}}'></progress>
+    </view>
+
+</template>
+<view>
+    <template is="iconTemplate"/>
+    <view class='text-view'>粉色</view>
+    <template is="progressTemplate" data="{{...pinkProgress}}"/>
+    <view class='text-view'>紫色</view>
+    <template is="progressTemplate" data="{{...purpleProgress}}"/>
+    <view class='text-view'></view>
+    <template is="{{flag?'progressTemplate':'iconTemplate'}}" data="{{...pinkProgress}}"/>
+</view>
+
+<switch wx:for="{{forItem}}" wx:key="unique" style="display: block;"> {{index}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+<switch wx:for="{{forItem}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>
+
+<view>  
+    
+    
+   
+   
+    <view class='sub-view' hidden='{{flag?true:false}}'></view>
+   
+   
+ 
+    
+
+
+
+    <view class='container'>
+        <icon type='success' size='30' color='#FF4040'></icon>
+        <icon type='success_no_circle' size='30' color='#FFAEB9'></icon>
+        <icon type='info' size='30' color='#pink'></icon>
+        <icon type='warn' size='30' color='red'></icon>
+        <icon type='waiting' size='30' color='green'></icon>
+        <icon type='cancel' size='30' color='green'></icon>
+        <icon type='download' size='30' color='green'></icon>
+        <icon type='search' size='30' color='green'></icon>
+        <icon type='clear' size='30' color='green'></icon>
+    </view>
+    <view class='flex_wrap' style='height:100px; flex_direction:row'>
+      <view class='for-item' wx:for="{{forItem}}" wx:key="unique">{{index}}:{{item}}</view>
+      <view class='for-item' wx:for="{{forItem}}" wx:key="unique" wx:for-item="obj" wx:for-index="idx">{{obj}}:{{idx}}</view>
+   
+    </view>
+    
+    
+     <view class='container'>
+        <progress percent='90' color='red' show-info='{{true}}' stroke-width='6' active='{{true}}'></progress>
+    </view>
+
+
+    <view>
+        <swiper indicator-dots="{{true}}" autoplay='{{true}}' interval='2000' duration='500' current='2'>
+            <swiper-item>
+                <view class='bc_purple swiper_view'></view>
+            </swiper-item>
+            <swiper-item>
+                <view class='bc_pink swiper_view'></view>
+            </swiper-item>
+            <swiper-item>
+                <view class='bc_green swiper_view'></view>
+            </swiper-item>
+        </swiper>
+    </view>
+
+    <view class='desc'>我要横着排列</view>
+    <view class='flex_wrap' style='height:100px; flex_direction:row'>
+        <view class='flex_item bc_purple'>
+            <view id='item-{{id}}'> 没毛病1</view>
+        </view>
+        <view class='flex_item bc_pink'>
+       
+        </view>
+        <view class='flex_item bc_green'>没毛病3</view>
+    </view>
+    <view class='desc'>我要纵着排列</view>
+    <view class='flex_wrap' style='height:300px; flex-direction:column'>
+        <view class='flex_item bc_green'>
+            
+            <view class='sub-view'>{{object.key}}{{array[2]}}</view>
+        </view>
+        <view class='flex_item bc_pink'>
+            <view wx:if="{{condition<110}}" >没</view>
+            <view wx:elif="{{condition==110}}" >毛病2</view>
+            <view wx:else="{{condition>110}}">病2</view>
+        </view>
+        <view class='flex_item bc_purple'>没毛病3
+          <view>
+            <block wx:if="{{true}}" wx:key="unique">
+                <icon type="success" size='30' color='red'></icon>
+                <text>啊吼吼叫啊</text>
+            </block>
+          </view>
+        </view>
+    </view>
+    <view class='desc'>我要横向滚</view>
+    <scroll-view scroll-x="{{true}}" style='height:240px; white-space:nowrap;'>
+        <view class='scroll_item scroll_item_x bc_purple'>没毛病1</view>
+        <view class='scroll_item scroll_item_x bc_pink'>没毛病2</view>
+        <view class='scroll_item scroll_item_x bc_green'>没毛病3</view>
+    </scroll-view>
+    <view class='desc'>我要纵向滚</view>
+    <scroll-view scroll-y="true"class='scroll_item_y' scroll-into-view='pink'>
+        <view id='green' class='scroll_item  bc_green'>没毛病1</view>
+        <view id='pink' class='scroll_item  bc_pink'>没毛病2</view>
+        <view id='purple' class='scroll_item  bc_purple'>没毛病3
+          <view class='veiw-row' wx:for="{{[1,2,3,4,5,6,7,8,9]}}"wx:key="unique"  wx:for-index="i" wx:for-item="row">
+          <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="unique" wx:for-index="j" wx:for-item="column">
+            <block wx:if="{{j <= i}}" wx:key="*this">
+                 <view class='view-item' > {{row}} * {{column}} = {{row * column}}</view>
+            </block>
+          </block>  
+        </view>
+
+        </view>
+    </scroll-view>
+
+
+</view>

@@ -1,0 +1,54 @@
+ <view style='text-align:center'>{{title}}</view>
+  <view> 点击左上角返回回到之前页面 </view>
+
+
+<view>
+   
+    
+     <view class='container'>
+        <progress percent='90' color='red' show-info='{{true}}' stroke-width='6' active='{{true}}'></progress>
+    </view>
+   
+
+
+    <view>
+        <swiper indicator-dots="{{true}}" autoplay='{{true}}' interval='2000' duration='500' current='2'>
+            <swiper-item>
+                <view class='bc_purple swiper_view'></view>
+            </swiper-item>
+            <swiper-item>
+                <view class='bc_pink swiper_view'></view>
+            </swiper-item>
+            <swiper-item>
+                <view class='bc_green swiper_view'></view>
+            </swiper-item>
+        </swiper>
+    </view>
+
+    <view class='desc'>我要横着排列</view>
+    <view class='flex_wrap' style='height:100px; flex_direction:row'>
+        <view class='flex_item bc_purple'>没毛病1</view>
+        <view class='flex_item bc_pink'>没毛病2</view>
+        <view class='flex_item bc_green'>没毛病3</view>
+    </view>
+    <view class='desc'>我要纵着排列</view>
+    <view class='flex_wrap' style='height:300px; flex-direction:column'>
+        <view class='flex_item bc_green'>没毛病1</view>
+        <view class='flex_item bc_pink'>没毛病2</view>
+        <view class='flex_item bc_purple'>没毛病3</view>
+    </view>
+    <view class='desc'>我要横向滚</view>
+    <scroll-view scroll-x="{{true}}" style='height:240px; white-space:nowrap;'>
+        <view class='scroll_item scroll_item_x bc_purple'>没毛病1</view>
+        <view class='scroll_item scroll_item_x bc_pink'>没毛病2</view>
+        <view class='scroll_item scroll_item_x bc_green'>没毛病3</view>
+    </scroll-view>
+    <view class='desc'>我要纵向滚</view>
+    <scroll-view scroll-y="true"class='scroll_item_y' scroll-into-view='pink'>
+        <view id='green' class='scroll_item  bc_green'>没毛病1</view>
+        <view id='pink' class='scroll_item  bc_pink'>没毛病2</view>
+        <view id='purple' class='scroll_item  bc_purple'>没毛病3</view>
+    </scroll-view>
+
+
+</view>

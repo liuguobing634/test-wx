@@ -1,0 +1,66 @@
+.navigator-hover {
+    color:blue;
+}
+
+.other-navigator-hover {
+    color:red;
+}
+.container{
+  height: 60px;
+  padding: 10px;
+  
+}
+.swiper_view{
+  height: 300px
+}
+
+.desc{
+  background-color: cyan;
+  color:  deeppink;
+  font-size: 18px;
+  padding: 10px;
+  height: 40px;
+}
+.scroll_item{
+  height: 240px;
+
+}
+.scroll_item_x{
+  width: 240px;
+  display: inline-block;
+
+}
+.scroll_item_y{
+  height: 300px;
+}
+
+
+.flex_wrap{
+  display: flex;
+  align-items:initial;
+  background-color: bisque
+ 
+}
+
+.flex_item{
+  display: flex;
+  justify-content: center;
+  background-color:lightgray;
+  border: 1px solid orange;
+  width: 100px;
+  height: 100px;
+
+}
+
+.bc_purple{
+  background-color:palevioletred;
+
+}
+.bc_green{
+  background-color:greenyellow;
+
+}
+.bc_pink{
+  background-color: pink;
+}
+

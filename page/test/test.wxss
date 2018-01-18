@@ -1,0 +1,111 @@
+
+
+.navigator-hover{
+  color: burlywood;
+}
+.other-navgator-hover{
+  color: red;
+}
+.other-navigator-hover{
+  color: blue;
+}
+.icon-view{
+  padding: 10px;
+
+}
+.text-veiw{
+  color: palegoldenrod;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.for-item{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: fuchsia
+}
+
+.view-row{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.view-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:5px;
+  margin: 5px 
+}
+
+.sub-view{
+ color: rebeccapurple;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#item-test{
+  color: deeppink;
+  font-family: 'Times New Roman';
+  padding-top: 10px;
+  padding-bottom: 10px 
+}
+.container{
+  height: 60px;
+  padding: 10px;
+  
+}
+.swiper_view{
+  height: 300px
+}
+
+.desc{
+  background-color: cyan;
+  color:  deeppink;
+  font-size: 18px;
+  padding: 10px;
+  height: 40px;
+}
+.scroll_item{
+  height: 240px;
+
+}
+.scroll_item_x{
+  width: 240px;
+  display: inline-block;
+
+}
+.scroll_item_y{
+  height: 300px;
+}
+
+
+.flex_wrap{
+  display: flex;
+  align-items:initial;
+  background-color: bisque
+ 
+}
+
+.flex_item{
+  display: flex;
+  justify-content: center;
+  background-color:lightgray;
+  border: 1px solid orange;
+  width: 100px;
+  height: 100px;
+
+}
+
+.bc_purple{
+  background-color:palevioletred;
+
+}
+.bc_green{
+  background-color:greenyellow;
+
+}
+.bc_pink{
+  background-color: pink;
+}
+
