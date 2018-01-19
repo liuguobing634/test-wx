@@ -2,7 +2,8 @@
   "pages":[
     "page/test/test",
     "page/test/test2",
-    "page/test/navigator"
+    "page/test/navigator",
+    "page/view/test3"
   ],
   "window":{
     "navigationBarBackgroundColor":"pink",

@@ -46,6 +46,29 @@ Page({
     array:[1,"hhh","你是傻逼吗 "],
     zero:"HI~~~傻逼"
   },
+  switch: function(e){
+    this.setData({
+      forItem:['你好','我好']
+    })
+console.log("witch+++++")
+  },
+  addToFront: function(e){
+    wx.showToast({
+      title:"hello",
+      content:"hi",
+    }),
+    wx.showShareMenu({
+      title:"h"
+    })
+    console.log("witch+++++66")
+  },
+  addNumberToFront: function(e){
+    wx.showActionSheet({
+      itemList: ['1','2','3']
+    })
+   
+    console.log("witch+++++77")
+  },
 
   /**
    * 生命周期函数--监听页面加载
