@@ -28,8 +28,10 @@ Page({
    */
   onShow: function () {
     wx.showModal({
-      title: 'ppp',
-      content: 'ppppp',
+      title: '你是个傻逼吗',
+      content: '是不是？',
+      confirmText:'是',
+      cancelText:'不是',
       success: function(res) {
         if (res.confirm) {
           wx.showToast({
