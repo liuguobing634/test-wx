@@ -1,8 +1,8 @@
 
 <view class='btn-area'>
     <navigator url='../../page/test/test2?title=漂亮的页面' hover-class='navigator-hover'>跳转到最漂亮的页面</navigator>
-    <navigator url='../../page/test/test2?title=redirect' open-type="redirect" hover-class='other-navgator-hover'>在这里打开最漂亮的页面</navigator>
-    <navigator url='../../page/test/test2' open-type='switchTab' hover-class='other-navigator-hover'>切换tab</navigator>
+    <navigator url='../../page/view/test3?title=redirect' open-type="redirect" hover-class='other-navgator-hover'>在这里打开最漂亮的页面</navigator>
+    <navigator url='../../page/view/test3' open-type='switchTab' hover-class='other-navigator-hover'>切换tab</navigator>
     <navigator url='../../page/test/navigator' open-type='switchTab' hover-class='other-navigator-hover'>切换tab</navigator>
 
 
@@ -33,7 +33,7 @@
     <template is="{{flag?'progressTemplate':'iconTemplate'}}" data="{{...pinkProgress}}"/>
 </view>
 
-<switch wx:for="{{forItem}}" wx:key="unique" style="display: block;"> {{index}} </switch>
+<switch  wx:for="{{forItem}}" wx:key="unique" style="display: block;"> {{index}} </switch>
 <button bindtap="switch"> Switch </button>
 <button bindtap="addToFront"> Add to the front </button>
 
@@ -79,13 +79,13 @@
     <view>
         <swiper indicator-dots="{{true}}" autoplay='{{true}}' interval='2000' duration='500' current='2'>
             <swiper-item>
-                <view class='bc_purple swiper_view'></view>
+                <view class='bc_purple swiper_view'>1</view>
             </swiper-item>
             <swiper-item>
-                <view class='bc_pink swiper_view'></view>
+                <view class='bc_pink swiper_view'>2</view>
             </swiper-item>
             <swiper-item>
-                <view class='bc_green swiper_view'></view>
+                <view class='bc_green swiper_view'>3</view>
             </swiper-item>
         </swiper>
     </view>

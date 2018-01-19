@@ -1,0 +1,28 @@
+<view>
+<view style='text-align:center'>{{title}}</view>
+    <view> 点击左上角返回回到之前页面 </view>
+    <view id="tapTest" data-hi="WeChat" bindtap='tapName'  >Click me</view>
+    <movable-area style="height: 200px;width: 200px;background: red;">
+    <movable-view style="height: 50px; width: 50px; background: blue;" x="{{x}}" y="{{y}}" direction="all">
+    </movable-view>
+  </movable-area>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to move to (30px, 30px)</button>
+  </view>
+  <movable-area style="height: 100px;width: 100px;background: red;" direction="all">
+    <movable-view style="height: 200px; width: 80px; background: blue;">
+    </movable-view>
+  </movable-area>
+
+  <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls='{{false}}' event-model="bubble">
+      <cover-view class='controls'>
+          <cover-view class='play' bindtap='play'>
+              <cover-image class='img' src="/../../page/img/dcc10_07_01.gif"></cover-image>
+          </cover-view>
+          <cover-view class='pause' bindtap='pause'>
+              <cover-image class='img' src='/../../page/img/timg (1).jpg'></cover-image>
+          </cover-view>
+          <cover-view class='time'>00:00</cover-view>
+      </cover-view>
+  </video>
+ </view>
