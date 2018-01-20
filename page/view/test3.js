@@ -4,13 +4,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-   
       x: 0,
       y: 0,
       motto: 'Hello World',
       userInfo: {},
       hasUserInfo: false,
-      canIUse: wx.canIUse('button.open-type.getUserInfo')
+      canIUse: wx.canIUse('button.open-type.getUserInfo'),
+      played: true,
+      time:0
     },
     tap: function () {
       this.setData({
@@ -50,22 +51,57 @@ Page({
   onLoad: function (options) {
     this.setData({
       title: options.title
-    })
+    });
+    var self = this;
+    setInterval(function() {
+      var d = self.data.time % 4;
+      var time = self.data.time;
+      var newX = 0;
+      var newY = 0;
+      if (d == 1) {
+        newX = 150;
+        newY = 0;
+      }
+      if (d == 2) {
+        newY = 150;
+        newX = 150;
+      }
+      if (d == 3) {
+        newX = 0;
+        newY = 150
+      }
+      if (d == 0) {
+        newY = 0;
+        newX = 0;
+      }
+      self.setData({
+        x: newX,
+        y: newY,
+        time: time + 1
+      });
+    },2000);
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function (e) {
-    this.videoCtx = wx.createVideoContext('myVideo'),
-    console.log("fsdf")
+    this.videoCtx = wx.createVideoContext('myVideo');
   },
-  play(){
-    this.videoCtx.play()
+  play: function(){
+    console.log(this);
+    if (this.data.played) {
+      this.data.played = false;
+      this.videoCtx.pause();
+    } else {
+      this.data.played = true;
+      this.videoCtx.play();
+    }
+    
   },
 
   pause(){
-    this.videoCtx.pause(),
+    this.videoCtx.play(),
     console.log("fs")
   },
   /**
